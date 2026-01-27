@@ -72,7 +72,7 @@ export default function UserLoginPage() {
         return;
       }
 
-      // ✅ CALL AUTH FUNCTION
+      // CALL AUTH FUNCTION
       setAuthSession(res.token);
 
       toast.success(MSG_LOGIN_SUCCESS_USER);

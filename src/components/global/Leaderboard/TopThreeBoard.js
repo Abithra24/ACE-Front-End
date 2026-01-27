@@ -35,7 +35,7 @@ export default function TopThreeBoard({ data = [] }) {
 
   return (
     <section className={styles.wrapper}>
-      {/* 🥈 SECOND */}
+      {/*  SECOND */}
       {second && (
         <div className={`${styles.card} ${styles.second}`}>
           <Avatar org={second} />
@@ -50,7 +50,7 @@ export default function TopThreeBoard({ data = [] }) {
         </div>
       )}
 
-      {/* 🥇 FIRST */}
+      {/*  FIRST */}
       {first && (
         <div className={`${styles.card} ${styles.first}`}>
           <Avatar org={first} />
@@ -65,7 +65,7 @@ export default function TopThreeBoard({ data = [] }) {
         </div>
       )}
 
-      {/* 🥉 THIRD */}
+      {/*  THIRD */}
       {third && (
         <div className={`${styles.card} ${styles.third}`}>
           <Avatar org={third} />

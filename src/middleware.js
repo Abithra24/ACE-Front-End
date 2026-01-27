@@ -32,7 +32,7 @@ export function middleware(request) {
   --------------------------------- */
   if (
     pathname.startsWith("/_next") ||
-    pathname.startsWith("/api/proxy") || // 🔥 IMPORTANT
+    pathname.startsWith("/api/proxy") || //  IMPORTANT
     pathname.startsWith("/images") ||
     pathname.match(/\.(png|jpg|jpeg|svg|css|js|ico)$/)
   ) {

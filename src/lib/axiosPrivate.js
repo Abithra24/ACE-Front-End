@@ -12,10 +12,10 @@ const apiPrivate = axios.create({
 /* ================= REQUEST INTERCEPTOR ================= */
 apiPrivate.interceptors.request.use(
   (config) => {
-    // 🔑 GET JWT TOKEN FROM SESSION
+    //  GET JWT TOKEN FROM SESSION
     const token = getAuthToken();
 
-    // 🔥 ATTACH BEARER TOKEN
+    // ATTACH BEARER TOKEN
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

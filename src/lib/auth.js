@@ -5,7 +5,7 @@ import CryptoJS from "crypto-js";
    CONFIG
    ====================================================== */
 
-// ⚠️ Frontend secret (obfuscation only, not real security)
+// Frontend secret (obfuscation only, not real security)
 const SECRET_KEY = "ACE_FRONTEND_SESSION_KEY_v1";
 
 /* ======================================================
@@ -34,7 +34,7 @@ const decrypt = (cipherText) => {
    ====================================================== */
 
 /**
- * ✅ Save auth session (ENCRYPTED)
+ *  Save auth session (ENCRYPTED)
  * MUST be called after login success
  */
 export const setAuthSession = (token) => {
@@ -44,7 +44,7 @@ export const setAuthSession = (token) => {
     const decoded = jwtDecode(token);
 
     const authPayload = {
-      token, // 🔥 VERY IMPORTANT (Bearer token)
+      token, //  VERY IMPORTANT (Bearer token)
       identity: decoded?.data?.identity || null,
       email: decoded?.data?.email || null,
       type: decoded?.data?.type || null, // "user" | "org"
@@ -63,7 +63,7 @@ export const setAuthSession = (token) => {
 };
 
 /**
- * ✅ Get auth session (DECRYPTED)
+ *  Get auth session (DECRYPTED)
  */
 export const getAuthFromSession = () => {
   if (typeof window === "undefined") return null;
@@ -75,7 +75,7 @@ export const getAuthFromSession = () => {
 };
 
 /**
- * ✅ Get RAW JWT token (for Bearer header)
+ *  Get RAW JWT token (for Bearer header)
  */
 export const getAuthToken = () => {
   if (typeof window === "undefined") return null;
@@ -85,7 +85,7 @@ export const getAuthToken = () => {
 };
 
 /**
- * ✅ Check login status
+ *  Check login status
  * Used for PUBLIC / PRIVATE API switch
  */
 export const isUserLoggedIn = () => {
@@ -103,7 +103,7 @@ export const isUserLoggedIn = () => {
 };
 
 /**
- * ✅ Clear auth session (logout / 401)
+ *  Clear auth session (logout / 401)
  */
 export const clearAuthSession = async () => {
   if (typeof window === "undefined") return;

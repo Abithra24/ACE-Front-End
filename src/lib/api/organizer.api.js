@@ -26,14 +26,14 @@ export const getApprovedOrganizerEventsApi = (orgId) =>
 /* ================= ORGANIZATION EVENTS (PUBLIC / PRIVATE) ================= */
 
 export const getOrganizationByEventsApi = async (slug) => {
-  // 👤 NOT LOGGED IN → PUBLIC
+  //  NOT LOGGED IN → PUBLIC
   if (!isUserLoggedIn()) {
     return handleApi(
       apiPublic.get(API_ENDPOINTS.ORGANIZER.ORG_EVENTS_PUBLIC(slug)),
     );
   }
 
-  // 🔐 LOGGED IN → PRIVATE
+  //  LOGGED IN → PRIVATE
   return handleApi(
     apiPrivate.get(API_ENDPOINTS.ORGANIZER.ORG_EVENTS_PRIVATE(slug)),
   );
